@@ -1,0 +1,93 @@
+# 🚲 LA Metro BikeShare Analysis
+
+## 📌 Project Overview
+
+The **LA Metro BikeShare Analysis Project** focuses on evaluating **bike station performance, trip patterns, and multimodal transportation integration**. The goal is to provide **data-driven recommendations** for improving station placement, increasing ridership, and optimizing infrastructure within **Downtown LA and the Westside regions**.
+
+This project uses **geospatial analysis, predictive modeling, and transit data integration** to enhance bike share accessibility and efficiency. The insights generated will support **infrastructure planning, multimodal transportation strategies, and investment decisions** for Metro BikeShare.
+
+---
+
+## 🛠️ Getting Started
+
+To understand the project workflow, **start with the Project Proposal**:
+
+1. **Project Proposal (`project_proposal.md`)**
+   - Defines the problem statement and objectives.
+   - Explores the role of **bike share in urban mobility**.
+   - Identifies key research questions, including **station demand forecasting** and **integration with public transit**.
+
+---
+
+## 📊 Data Processing & Cleaning
+
+The **Data Cleaning** step ensures data integrity and prepares it for analysis. Key steps include:
+
+### 1️⃣ **Data Collection & Integration**
+   - Combines datasets from:
+     - **Metro BikeShare trips**
+     - **Bike station geolocation data**
+     - **Weather conditions from Santa Monica Airport**
+     - **LA Metro transit schedules and ridership data**
+   - Standardizes date and time formats for **trip analysis**.
+
+### 2️⃣ **Handling Missing & Inconsistent Data**
+   - Identifies missing values in:
+     - **Start/end station coordinates**
+     - **Trip durations**
+     - **Bike availability data**
+   - Uses **imputation techniques** where feasible.
+
+### 3️⃣ **Feature Engineering**
+   - **Time-based variables**: Rush hour flags, weekday vs. weekend usage.
+   - **Weather impact analysis**: Matching trips with historical weather conditions.
+   - **Station categorization**: Grouping stations based on usage frequency.
+
+### 4️⃣ **Outlier Detection & Removal**
+   - Identifies unrealistic trip durations (e.g., trips over 6 hours).
+   - Detects incorrect geospatial entries.
+
+---
+
+## 🔎 Exploratory Data Analysis (EDA)
+
+The **EDA** phase uncovers key insights into bike share usage trends, station demand, and multimodal connectivity.
+
+### 1️⃣ **Trip Volume & Usage Patterns**
+   - Identifies **peak usage hours** and busiest days.
+   - Compares **Downtown LA vs. Westside station demand**.
+   - Analyzes **seasonal variations in bike share ridership**.
+
+### 2️⃣ **Station Performance Analysis**
+   - Maps **high and low-performing stations**.
+   - Evaluates **trip start vs. trip end imbalances**.
+   - Identifies underutilized stations for **potential relocation**.
+
+### 3️⃣ **Multimodal Integration**
+   - Examines connectivity between **bike share stations and LA Metro stops**.
+   - Evaluates the impact of **bus/train proximity on bike share usage**.
+
+### 4️⃣ **Weather & External Factors**
+   - Assesses the impact of **rainfall and temperature on ridership**.
+   - Explores correlation between **special events and bike trip spikes**.
+
+---
+
+## 📁 Project Structure
+
+```bash
+├── data/
+│   ├── raw/                  # Original datasets (BikeShare, Metro ridership, weather)
+│   ├── processed/            # Cleaned & transformed data
+│   ├── geo/                  # Spatial datasets (station locations, transit stops)
+├── notebooks/
+│   ├── 01_data_cleaning.ipynb # Data processing & wrangling
+│   ├── 02_eda.ipynb          # Exploratory Data Analysis
+├── reports/
+│   ├── project_proposal.md   # Problem statement & objectives
+│   ├── findings.md           # Key insights & recommendations
+├── src/
+│   ├── data_processing.py    # Data cleaning & transformation scripts
+│   ├── eda_visuals.py        # EDA visualization functions
+├── README.md                 # Project overview
+└── requirements.txt          # Python libraries required
